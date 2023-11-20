@@ -36,10 +36,13 @@ public:
     virtual ~Journeys();
 
     // -------------------------------------------- Other Methods
-    int Add(Journey journey);
+    void Add(Journey journey);
+
+    void Show();
 
 protected:
     Node *_head;
+    Node *_tail;
 };
 
 #endif // JOURNEY_H

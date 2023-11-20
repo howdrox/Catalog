@@ -39,14 +39,14 @@ Journey::Journey(Journey &unTrajet)
     cout << "Appel au constructeur de copie de <Journey>" << endl;
 #endif
 
-_begin = unTrajet._begin;
-_end = unTrajet.end;
+    _begin = unTrajet._begin;
+    _end = unTrajet.end;
 } //----- Fin de Journey (constructeur de copie)
 
-Journey::Journey(char *depart, const char *arrivee){
+Journey::Journey(char *depart, const char *arrivee)
+{
     _begin = depart;
     _end = arrivee;
-
 }
 
 Journey::Journey()
