@@ -30,9 +30,6 @@ Journeys::~Journeys() {
 #endif
 }
 
-void operator<<(ostream &cout, const Journey &journey) {
-  cout << journey._begin << "->" << journey._end << endl;
-}
 // -------------------------------------------- Other Methods
 
 int Journeys::Add(Journey journey) {}

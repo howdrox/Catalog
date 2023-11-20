@@ -1,84 +1,28 @@
-/*************************************************************************
-                           Journey  -  description
-                             -------------------
-    début                : $DATE$
-    copyright            : (C) $YEAR$ par $AUTHOR$
-    e-mail               : $EMAIL$
-*************************************************************************/
-
-//---------- Interface de la classe <Journey> (fichier Journey.h) ----------------
-#include <iostream>
 #ifndef JOURNEY_H
 #define JOURNEY_H
 
-//--------------------------------------------------- Interfaces utilisées
+#include <iostream>
+using std::cout;
+using std::endl;
 
-//------------------------------------------------------------- Constantes
-
-//------------------------------------------------------------------ Types
-
-//------------------------------------------------------------------------
-// Rôle de la classe <Journey>
-//
-//
-//------------------------------------------------------------------------
-
-class Journey
-{
-    //----------------------------------------------------------------- PUBLIC
+class Journey {
 
 public:
-    //----------------------------------------------------- Méthodes publiques
-    virtual void Show() const;
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
+  Journey();
 
-    //------------------------------------------------- Surcharge d'opérateurs
-    Journey &operator=(const Journey &unTrajet);
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
+  Journey(Journey &unTrajet);
 
-    //-------------------------------------------- Constructeurs - destructeur
-    Journey();
-    // Mode d'emploi (constructeur de copie) :
-    //
-    // Contrat :
-    //
+  Journey(char *depart, const char *arrivee);
 
-    Journey(Journey &unTrajet);
-    // Mode d'emploi (constructeur de copie) :
-    //
-    // Contrat :
-    //
+  virtual void Show() const;
 
-    Journey(char *depart, const char *arrivee);
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
+  friend void operator<<(std::ostream &cout, const Journey &journey);
 
-    friend void operator<<(std::ostream & cout,const Journey & journey);
-
-    virtual ~Journey();
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
-
-    //------------------------------------------------------------------ PRIVE
+  virtual ~Journey();
 
 protected:
-    //----------------------------------------------------- Méthodes protégées
-
-    //----------------------------------------------------- Attributs protégés
-    const char *_begin;
-    const char *_end;
+  const char *_begin;
+  const char *_end;
 };
 
-//-------------------------------- Autres définitions dépendantes de <Journey>
-
-#endif // JOURNEY_H
+#endif
