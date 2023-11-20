@@ -36,3 +36,7 @@ Journeys::~Journeys()
     cout << "Appel au destructeur de <Journeys>" << endl;
 #endif
 }
+
+void operator<<(ostream & cout,const Journey & journey){
+    cout<<journey._begin<<"->"<<journey._end<<endl;
+}

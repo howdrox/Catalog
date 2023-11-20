@@ -6,7 +6,8 @@
     e-mail               : $EMAIL$
 *************************************************************************/
 
-//---------- Interface de la classe <CompositeJourney> (fichier CompositeJourney.h) ----------------
+//---------- Interface de la classe <CompositeJourney> (fichier
+//CompositeJourney.h) ----------------
 #ifndef TC_H
 #define TC_H
 
@@ -23,59 +24,59 @@
 //
 //------------------------------------------------------------------------
 
-class CompositeJourney : public Journey
-{
-    //----------------------------------------------------------------- PUBLIC
+class CompositeJourney : public Journey {
+  //----------------------------------------------------------------- PUBLIC
 
 public:
-    //----------------------------------------------------- Méthodes publiques
-    void Show() const;
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
+  //----------------------------------------------------- Méthodes publiques
+  void Show() const;
+  // Mode d'emploi :
+  //
+  // Contrat :
+  //
 
-    //------------------------------------------------- Surcharge d'opérateurs
-    CompositeJourney &operator=(const CompositeJourney &unTC);
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
+  //------------------------------------------------- Surcharge d'opérateurs
+  CompositeJourney &operator=(const CompositeJourney &unTC);
+  // Mode d'emploi :
+  //
+  // Contrat :
+  //
 
-    //-------------------------------------------- Constructeurs - destructeur
-    CompositeJourney();
-    // Mode d'emploi (constructeur de copie) :
-    //
-    // Contrat :
-    //
+  //-------------------------------------------- Constructeurs - destructeur
+  CompositeJourney();
+  // Mode d'emploi (constructeur de copie) :
+  //
+  // Contrat :
+  //
 
-    CompositeJourney(const CompositeJourney &unTC);
-    // Mode d'emploi (constructeur de copie) :
-    //
-    // Contrat :
-    //
+  CompositeJourney(const CompositeJourney &unTC);
+  // Mode d'emploi (constructeur de copie) :
+  //
+  // Contrat :
+  //
 
-    CompositeJourney(const Journey *desTrajets);
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
+  CompositeJourney(const Journey *desTrajets);
+  // Mode d'emploi :
+  //
+  // Contrat :
+  //
 
-    virtual ~CompositeJourney();
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
+  virtual ~CompositeJourney();
+  // Mode d'emploi :
+  //
+  // Contrat :
+  //
 
-    //------------------------------------------------------------------ PRIVE
+  //------------------------------------------------------------------ PRIVE
 
 protected:
-    //----------------------------------------------------- Méthodes protégées
+  //----------------------------------------------------- Méthodes protégées
 
-    //----------------------------------------------------- Attributs protégés
-    Journeys _journeys;
+  //----------------------------------------------------- Attributs protégés
+  Journeys _journeys;
 };
 
-//-------------------------------- Autres définitions dépendantes de <CompositeJourney>
+//-------------------------------- Autres définitions dépendantes de
+//<CompositeJourney>
 
 #endif // TC_H
