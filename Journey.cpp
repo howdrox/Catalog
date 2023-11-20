@@ -31,19 +31,29 @@ Journey &Journey::operator=(const Journey &unTrajet)
 } //----- Fin de operator =
 
 //-------------------------------------------- Constructeurs - destructeur
-Journey::Journey(const Journey &unTrajet)
+Journey::Journey(Journey &unTrajet)
 // Algorithme :
 //
 {
 #ifdef MAP
     cout << "Appel au constructeur de copie de <Journey>" << endl;
 #endif
+
+_begin = unTrajet._begin;
+_end = unTrajet.end;
 } //----- Fin de Journey (constructeur de copie)
+
+Journey::Journey(char *depart, const char *arrivee){
+    _begin = depart;
+    _end = arrivee;
+
+}
 
 Journey::Journey()
 // Algorithme :
 //
 {
+
 #ifdef MAP
     cout << "Appel au constructeur de <Journey>" << endl;
 #endif

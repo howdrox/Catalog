@@ -1,12 +1,12 @@
 /*************************************************************************
-                           TS  -  description
+                           SimpleJourney  -  description
                              -------------------
     début                : $DATE$
     copyright            : (C) $YEAR$ par $AUTHOR$
     e-mail               : $EMAIL$
 *************************************************************************/
 
-//---------- Réalisation de la classe <TS> (fichier TS.cpp) ------------
+//- Réalisation de la classe <SimpleJourney> (fichier SimpleJourney.cpp) -
 
 //---------------------------------------------------------------- INCLUDE
 
@@ -15,62 +15,68 @@
 using namespace std;
 
 //------------------------------------------------------ Include personnel
-#include "TS.h"
+#include "SimpleJourney.h"
 
 //------------------------------------------------------------- Constantes
 
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-void TS::Afficher() const
+void SimpleJourney::Show() const
 // Algorithme :
 //
 {
-} //----- Fin de Afficher
+} //----- Fin de Show
 
 //------------------------------------------------- Surcharge d'opérateurs
-TS &TS::operator=(const TS &unTS)
+SimpleJourney &SimpleJourney::operator=(const SimpleJourney &aSimpleJourney)
 // Algorithme :
 //
 {
 } //----- Fin de operator =
 
 //-------------------------------------------- Constructeurs - destructeur
-TS::TS(const TS &unTS)
+SimpleJourney::SimpleJourney(const SimpleJourney &aSimpleJourney)
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au constructeur de copie de <TS>" << endl;
+    cout << "Appel au constructeur de copie de <SimpleJourney>" << endl;
 #endif
-} //----- Fin de TS (constructeur de copie)
+_begin = aSimpleJourney._begin;
+_end = aSimpleJourney._end;
+_transportMethod = aSimpleJourney._transportMethod;
+} //----- Fin de SimpleJourney (constructeur de copie)
 
-TS::TS()
+SimpleJourney::SimpleJourney()
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au constructeur de <TS>" << endl;
+    cout << "Appel au constructeur de <SimpleJourney>" << endl;
 #endif
-} //----- Fin de TS
+} //----- Fin de SimpleJourney
 
-TS::TS(const char *depart, const char *arrivee, const char *transport)
+SimpleJourney::SimpleJourney(const char *depart, const char *arrivee, const char *transport)
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au constructeur de <TS>" << endl;
+    cout << "Appel au constructeur de <SimpleJourney>" << endl;
 #endif
-} //----- Fin de TS
+_begin = depart;
+_end = arrivee;
+_transportMethod = transport;
+} //----- Fin de SimpleJourney
 
-TS::~TS()
+SimpleJourney::~SimpleJourney()
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au destructeur de <TS>" << endl;
+    cout << "Appel au destructeur de <SimpleJourney>" << endl;
 #endif
-} //----- Fin de ~TS
+} //----- Fin de ~SimpleJourney
 
 //------------------------------------------------------------------ PRIVE
 

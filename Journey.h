@@ -48,13 +48,13 @@ public:
     // Contrat :
     //
 
-    Journey(const Journey &unTrajet);
+    Journey(Journey &unTrajet);
     // Mode d'emploi (constructeur de copie) :
     //
     // Contrat :
     //
 
-    Journey(const char *depart, const char *arrivee, const char *transport);
+    Journey(char *depart, const char *arrivee);
     // Mode d'emploi :
     //
     // Contrat :
