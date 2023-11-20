@@ -33,28 +33,12 @@ Journeys::~Journeys()
 #endif
 }
 
+void operator<<(ostream &cout, const Journey &journey)
+{
+    cout << journey._begin << "->" << journey._end << endl;
+}
 // -------------------------------------------- Other Methods
 
-void Journeys::Add(Journey journey)
+int Journeys::Add(Journey journey)
 {
-    Node *newNode = new Node(journey);
-    if (_head == nullptr)
-    {
-        _head = _tail = newNode;
-    }
-    else
-    {
-        _tail->next = newNode;
-        _tail = newNode;
-    }
-}
-
-void Journeys::Show()
-{
-    Node *current = _head;
-    while (current != nullptr)
-    {
-        current->data.Show();
-        current = current->next;
-    }
 }

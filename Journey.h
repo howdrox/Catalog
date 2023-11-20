@@ -7,6 +7,7 @@
 *************************************************************************/
 
 //---------- Interface de la classe <Journey> (fichier Journey.h) ----------------
+#include <iostream>
 #ifndef JOURNEY_H
 #define JOURNEY_H
 
@@ -59,6 +60,8 @@ public:
     //
     // Contrat :
     //
+
+    friend void operator<<(std::ostream & cout,const Journey & journey);
 
     virtual ~Journey();
     // Mode d'emploi :
