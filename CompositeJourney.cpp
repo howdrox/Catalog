@@ -16,13 +16,14 @@ using namespace std;
 
 //------------------------------------------------------ Include personnel
 #include "CompositeJourney.h"
+#include "Journeys.h"
 
 //------------------------------------------------------------- Constantes
 
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-void CompositeJourney::Afficher() const
+void CompositeJourney::Show() const
 // Algorithme :
 //
 {
@@ -54,7 +55,7 @@ CompositeJourney::CompositeJourney()
 #endif
 } //----- Fin de CompositeJourney
 
-CompositeJourney::CompositeJourney(const Trajet *desTrajets)
+CompositeJourney::CompositeJourney(const Journey *desTrajets)
 // Algorithme :
 //
 {

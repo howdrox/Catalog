@@ -7,8 +7,8 @@
 *************************************************************************/
 
 //---------- Interface de la classe <Journey> (fichier Journey.h) ----------------
-#if !defined(TRAJET_H)
-#define TRAJET_H
+#if !defined(JOURNEY_H)
+#define JOURNEY_H
 
 //--------------------------------------------------- Interfaces utilisées
 
@@ -78,4 +78,4 @@ protected:
 
 //-------------------------------- Autres définitions dépendantes de <Journey>
 
-#endif // Trajet_H
+#endif // JOURNEY_H
