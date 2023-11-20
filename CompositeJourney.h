@@ -55,7 +55,7 @@ public:
     // Contrat :
     //
 
-    CompositeJourney(const Journey *desTrajets);
+    CompositeJourney(Journey **desTrajets);
     // Mode d'emploi :
     //
     // Contrat :
@@ -73,7 +73,7 @@ protected:
     //----------------------------------------------------- Méthodes protégées
 
     //----------------------------------------------------- Attributs protégés
-    Journeys _journeys;
+    Journeys** _journeys;
 };
 
 //-------------------------------- Autres définitions dépendantes de <CompositeJourney>
