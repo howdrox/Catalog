@@ -7,7 +7,7 @@
 *************************************************************************/
 
 //---------- Interface de la classe <CompositeJourney> (fichier CompositeJourney.h) ----------------
-#if !defined(TC_H)
+#ifndef TC_H
 #define TC_H
 
 //--------------------------------------------------- Interfaces utilisées
