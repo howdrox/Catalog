@@ -37,20 +37,6 @@ CompositeJourney &CompositeJourney::operator=(const CompositeJourney &aComposite
 } //----- Fin de operator =
 
 //-------------------------------------------- Constructeurs - destructeur
-CompositeJourney::CompositeJourney(const CompositeJourney &aCompositeJourney)
-// Algorithme :
-//
-{
-#ifdef MAP
-    cout << "Appel au constructeur de copie de <CompositeJourney>" << endl;
-#endif
-    _journeys = new Journeys *[sizeof(Journey *)];
-
-    for (int i = 0; i < _taille; i++)
-    {
-        _journeys.Add(desTrajets[i]);
-    }
-} //----- Fin de CompositeJourney (constructeur de copie)
 
 CompositeJourney::CompositeJourney()
 // Algorithme :
