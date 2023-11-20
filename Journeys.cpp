@@ -39,6 +39,26 @@ void operator<<(ostream &cout, const Journey &journey)
 }
 // -------------------------------------------- Other Methods
 
-int Journeys::Add(Journey journey)
+void Journeys::Add(Journey journey)
 {
+    Node *newNode = new Node(journey);
+    if (_head == nullptr)
+    {
+        _head = _tail = newNode;
+    }
+    else
+    {
+        _tail->next = newNode;
+        _tail = newNode;
+    }
+}
+
+void Journeys::Show()
+{
+    Node *current = _head;
+    while (current != nullptr)
+    {
+        current->data.Show();
+        current = current->next;
+    }
 }
