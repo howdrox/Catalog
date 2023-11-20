@@ -3,7 +3,13 @@ using namespace std;
 
 #include "SimpleJourney.h"
 
-void SimpleJourney::Show() const {}
+void SimpleJourney::Show() const {
+  cout << _begin << "-- (" << _transportMethod << ") ->" << _end << _end;
+}
+
+void operator<<(ostream &cout, const SimpleJourney &simpleJourney) {
+  simpleJourney.Show();
+}
 
 SimpleJourney::SimpleJourney() {}
 
