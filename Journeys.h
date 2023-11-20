@@ -31,8 +31,6 @@ public:
     // -------------------------------------------- Constructors & Destructor
     Journeys();
 
-    Journeys(const Journeys &journeys);
-
     virtual ~Journeys();
 
     // -------------------------------------------- Other Methods
