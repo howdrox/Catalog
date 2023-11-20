@@ -7,7 +7,7 @@
 *************************************************************************/
 
 //---------- Interface de la classe <SimpleJourney> (fichier SimpleJourney.h) ----------------
-#if !defined(TS_H)
+#ifndef TS_H
 #define TS_H
 
 //--------------------------------------------------- Interfaces utilisées

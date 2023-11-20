@@ -7,7 +7,7 @@
 *************************************************************************/
 
 //---------- Interface de la classe <Journey> (fichier Journey.h) ----------------
-#if !defined(JOURNEYS_H)
+#ifndef JOURNEYS_H
 #define JOURNEYS_H
 
 //--------------------------------------------------- Interfaces utilisées
