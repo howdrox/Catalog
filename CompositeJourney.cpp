@@ -44,6 +44,12 @@ CompositeJourney::CompositeJourney(const CompositeJourney &aCompositeJourney)
 #ifdef MAP
     cout << "Appel au constructeur de copie de <CompositeJourney>" << endl;
 #endif
+    _journeys = new Journeys *[sizeof(Journey *)];
+
+    for (int i = 0; i < _taille; i++)
+    {
+        _journeys.Add(desTrajets[i]);
+    }
 } //----- Fin de CompositeJourney (constructeur de copie)
 
 CompositeJourney::CompositeJourney()
@@ -65,10 +71,15 @@ CompositeJourney::CompositeJourney(Journey **desTrajets)
     int _taille = sizeof(desTrajets) / sizeof(Journey*);
     _journeys = new Journeys *[_taille * sizeof(Journey *)];
 
-    for (int i = 0; i < _taille; i++)
+    int i;
+    for (i = 0; i < _taille; i++)
     {
         _journeys.Add(desTrajets[i]);
+        if (i==0){
+            _begin = desTrajets[i]->_begin;
+        }
     }
+    _end = desTrajets[i]->_end;
 
 } //----- Fin de CompositeJourney
 
@@ -78,7 +89,8 @@ CompositeJourney::~CompositeJourney()
 {
 #ifdef MAP
     cout << "Appel au destructeur de <CompositeJourney>" << endl;
-#endif
+#endif*
+delete _journeys;
 } //----- Fin de ~CompositeJourney
 
 //------------------------------------------------------------------ PRIVE
