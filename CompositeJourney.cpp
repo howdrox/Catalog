@@ -30,14 +30,14 @@ void CompositeJourney::Show() const
 } //----- Fin de Afficher
 
 //------------------------------------------------- Surcharge d'opérateurs
-CompositeJourney &CompositeJourney::operator=(const CompositeJourney &unTC)
+CompositeJourney &CompositeJourney::operator=(const CompositeJourney &aCompositeJourney)
 // Algorithme :
 //
 {
 } //----- Fin de operator =
 
 //-------------------------------------------- Constructeurs - destructeur
-CompositeJourney::CompositeJourney(const CompositeJourney &unTC)
+CompositeJourney::CompositeJourney(const CompositeJourney &aCompositeJourney)
 // Algorithme :
 //
 {
@@ -55,13 +55,21 @@ CompositeJourney::CompositeJourney()
 #endif
 } //----- Fin de CompositeJourney
 
-CompositeJourney::CompositeJourney(const Journey *desTrajets)
+CompositeJourney::CompositeJourney(Journey **desTrajets)
 // Algorithme :
 //
 {
 #ifdef MAP
     cout << "Appel au constructeur de <CompositeJourney>" << endl;
 #endif
+    int _taille = sizeof(desTrajets) / sizeof(Journey*);
+    _journeys = new Journeys *[_taille * sizeof(Journey *)];
+
+    for (int i = 0; i < _taille; i++)
+    {
+        _journeys.Add(desTrajets[i]);
+    }
+
 } //----- Fin de CompositeJourney
 
 CompositeJourney::~CompositeJourney()
