@@ -23,13 +23,13 @@
 //
 //------------------------------------------------------------------------
 
-class TS : public Trajet
+class SimpleJourney : public Journey
 {
     //----------------------------------------------------------------- PUBLIC
 
 public:
     //----------------------------------------------------- Méthodes publiques
-    void Afficher() const;
+    void Show() const;
     // Mode d'emploi :
     //
     // Contrat :
@@ -74,7 +74,7 @@ protected:
 
     //----------------------------------------------------- Attributs protégés
 
-    const char *_transport;
+    const char *_transportMethod;
 };
 
 //-------------------------------- Autres définitions dépendantes de <TS>

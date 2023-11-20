@@ -22,13 +22,13 @@
 //
 //------------------------------------------------------------------------
 
-class TC : public Trajet
+class CompositeJourney : public Journey
 {
     //----------------------------------------------------------------- PUBLIC
 
 public:
     //----------------------------------------------------- Méthodes publiques
-    void Afficher() const;
+    void Show() const;
     // Mode d'emploi :
     //
     // Contrat :
@@ -72,7 +72,7 @@ protected:
     //----------------------------------------------------- Méthodes protégées
 
     //----------------------------------------------------- Attributs protégés
-    Trajet *_trajetCompose;
+    Journeys _journeys;
 };
 
 //-------------------------------- Autres définitions dépendantes de <TC>

@@ -21,6 +21,7 @@
 //
 //
 //------------------------------------------------------------------------
+Journey::Show;
 
 class Trajet
 {
@@ -72,8 +73,8 @@ protected:
     //----------------------------------------------------- Méthodes protégées
 
     //----------------------------------------------------- Attributs protégés
-    const char *_depart;
-    const char *_arrivee;
+    const char *_begin;
+    const char *_end;
 };
 
 //-------------------------------- Autres définitions dépendantes de <Trajet>
