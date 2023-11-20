@@ -6,36 +6,41 @@
     e-mail               : louis.kusno@insa-lyon.fr
 *************************************************************************/
 
-//---------- Interface de la classe <Journey> (fichier Journey.h) ----------------
+//---------- Interface de la classe <Journey> (fichier Journey.h)
+//----------------
 #ifndef JOURNEYS_H
 #define JOURNEYS_H
 
 //------------------------------------------------------------------------
 // A linked list of `Journey`
-//
 //------------------------------------------------------------------------
 
 #include "Journey.h"
 
-class Journeys
-{
-public:
-    Journeys &operator=(const Journeys &aJourney);
+struct Node {
+  Journey data;
+  Node *next;
 
+  // Constructor to initialize the node with data and next pointer
+  Node(Journey j) : data(j), next(nullptr) {}
+};
+
+class Journeys {
+public:
     // -------------------------------------------- Constructors & Destructor
     Journeys();
 
-    Journeys(const Journeys &journeys);
+  virtual ~Journeys();
 
-    virtual ~Journeys();
+  void Add(Journey journey);
 
-    // -------------------------------------------- Other Methods
-    int Add(const char *depart, const char *arrivee, const char *transport);
+  void Show() const;
 
-    virtual void Show() const;
+  friend void operator<<(std::ostream &cout, const Journeys &Journeys);
 
 protected:
-    Journey *_head;
+  Node *_head;
+  Node *_tail;
 };
 
-#endif // JOURNEY_H
+#endif

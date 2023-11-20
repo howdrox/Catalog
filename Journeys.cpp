@@ -11,28 +11,26 @@ using namespace std;
 
 #include "Journeys.h"
 
-Journeys &Journeys::operator=(const Journeys &unTrajet)
-{
+Journeys::Journeys() : _head(nullptr), _tail(nullptr) {}
+
+Journeys::~Journeys() {}
+
+void Journeys::Add(Journey journey) {
+  Node *newNode = new Node(journey);
+  if (_head == nullptr) {
+    _head = _tail = newNode;
+  } else {
+    _tail->next = newNode;
+    _tail = newNode;
+  }
 }
 
-//-------------------------------------------- Constructors & Destructor
-Journeys::Journeys()
-{
-#ifdef MAP
-    cout << "Appel au constructeur de <Journeys>" << endl;
-#endif
+void Journeys::Show() const {
+  Node *current = _head;
+  while (current != nullptr) {
+    current->data.Show();
+    current = current->next;
+  }
 }
 
-Journeys::Journeys(const Journeys &unTrajet)
-{
-#ifdef MAP
-    cout << "Appel au constructeur de copie de <Journeys>" << endl;
-#endif
-}
-
-Journeys::~Journeys()
-{
-#ifdef MAP
-    cout << "Appel au destructeur de <Journeys>" << endl;
-#endif
-}
+void operator<<(ostream &cout, const Journeys &journeys) { journeys.Show(); }
