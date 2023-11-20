@@ -18,13 +18,8 @@ Journeys::Journeys() : _head(nullptr), _tail(nullptr) {
 #endif
 }
 
-Journeys::Journeys(const Journeys &unTrajet) {
-#ifdef MAP
-  cout << "Appel au constructeur de copie de <Journeys>" << endl;
-#endif
-}
-
-Journeys::~Journeys() {
+Journeys::~Journeys()
+{
 #ifdef MAP
   cout << "Appel au destructeur de <Journeys>" << endl;
 #endif

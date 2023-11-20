@@ -27,9 +27,8 @@ struct Node {
 
 class Journeys {
 public:
-  Journeys();
-
-  Journeys(const Journeys &journeys);
+    // -------------------------------------------- Constructors & Destructor
+    Journeys();
 
   virtual ~Journeys();
 
