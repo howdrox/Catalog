@@ -10,8 +10,6 @@ public:
 
   SimpleJourney();
 
-  SimpleJourney(const SimpleJourney &unTS);
-
   SimpleJourney(const char *depart, const char *arrivee, const char *transport);
   virtual ~SimpleJourney();
 
