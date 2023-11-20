@@ -20,16 +20,16 @@
 class Journeys
 {
 public:
-    Journeys &operator=(const Journeys &unTrajet);
+    Journeys &operator=(const Journeys &aJourney);
 
-    //-------------------------------------------- Constructors & Destructor
+    // -------------------------------------------- Constructors & Destructor
     Journeys();
 
     Journeys(const Journeys &journeys);
 
     virtual ~Journeys();
 
-    //------------------------------------------- Other Methods
+    // -------------------------------------------- Other Methods
     int Add(const char *depart, const char *arrivee, const char *transport);
 
     virtual void Show() const;
