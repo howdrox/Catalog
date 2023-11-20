@@ -11,21 +11,9 @@ using namespace std;
 
 #include "Journeys.h"
 
-//-------------------------------------------- Constructors & Destructor
-Journeys::Journeys() : _head(nullptr), _tail(nullptr) {
-#ifdef MAP
-  cout << "Appel au constructeur de <Journeys>" << endl;
-#endif
-}
+Journeys::Journeys() : _head(nullptr), _tail(nullptr) {}
 
-Journeys::~Journeys()
-{
-#ifdef MAP
-  cout << "Appel au destructeur de <Journeys>" << endl;
-#endif
-}
-
-// -------------------------------------------- Other Methods
+Journeys::~Journeys() {}
 
 void Journeys::Add(Journey journey) {
   Node *newNode = new Node(journey);
