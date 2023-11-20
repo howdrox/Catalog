@@ -22,23 +22,21 @@ using namespace std;
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-void TC::Afficher ( ) const;
+void Trajet::Afficher() const
 // Algorithme :
 //
 {
 } //----- Fin de Afficher
 
-
 //------------------------------------------------- Surcharge d'opérateurs
-Trajet & Trajet::operator = ( const Trajet & unTrajet )
+Trajet &Trajet::operator=(const Trajet &unTrajet)
 // Algorithme :
 //
 {
 } //----- Fin de operator =
 
-
 //-------------------------------------------- Constructeurs - destructeur
-Trajet::Trajet ( const Trajet & unTrajet )
+Trajet::Trajet(const Trajet &unTrajet)
 // Algorithme :
 //
 {
@@ -47,8 +45,7 @@ Trajet::Trajet ( const Trajet & unTrajet )
 #endif
 } //----- Fin de Trajet (constructeur de copie)
 
-
-Trajet::Trajet ( )
+Trajet::Trajet()
 // Algorithme :
 //
 {
@@ -57,8 +54,7 @@ Trajet::Trajet ( )
 #endif
 } //----- Fin de Trajet
 
-
-Trajet::~Trajet ( )
+Trajet::~Trajet()
 // Algorithme :
 //
 {
@@ -67,8 +63,6 @@ Trajet::~Trajet ( )
 #endif
 } //----- Fin de ~Trajet
 
-
 //------------------------------------------------------------------ PRIVE
 
 //----------------------------------------------------- Méthodes protégées
-

@@ -42,6 +42,12 @@ public:
     //
 
     //-------------------------------------------- Constructeurs - destructeur
+    TC();
+    // Mode d'emploi (constructeur de copie) :
+    //
+    // Contrat :
+    //
+
     TC(const TC &unTC);
     // Mode d'emploi (constructeur de copie) :
     //

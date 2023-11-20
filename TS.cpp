@@ -22,23 +22,21 @@ using namespace std;
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-void TC::Afficher ( ) const;
+void TS::Afficher() const
 // Algorithme :
 //
 {
 } //----- Fin de Afficher
 
-
 //------------------------------------------------- Surcharge d'opérateurs
-TS & TS::operator = ( const TS & unTS )
+TS &TS::operator=(const TS &unTS)
 // Algorithme :
 //
 {
 } //----- Fin de operator =
 
-
 //-------------------------------------------- Constructeurs - destructeur
-TS::TS ( const TS & unTS )
+TS::TS(const TS &unTS)
 // Algorithme :
 //
 {
@@ -47,8 +45,7 @@ TS::TS ( const TS & unTS )
 #endif
 } //----- Fin de TS (constructeur de copie)
 
-
-TS::TS ( )
+TS::TS()
 // Algorithme :
 //
 {
@@ -57,8 +54,7 @@ TS::TS ( )
 #endif
 } //----- Fin de TS
 
-
-TS::TS ( const char * depart, const char * arrivee, const char * transport )
+TS::TS(const char *depart, const char *arrivee, const char *transport)
 // Algorithme :
 //
 {
@@ -67,8 +63,7 @@ TS::TS ( const char * depart, const char * arrivee, const char * transport )
 #endif
 } //----- Fin de TS
 
-
-TS::~TS ( )
+TS::~TS()
 // Algorithme :
 //
 {
@@ -77,8 +72,6 @@ TS::~TS ( )
 #endif
 } //----- Fin de ~TS
 
-
 //------------------------------------------------------------------ PRIVE
 
 //----------------------------------------------------- Méthodes protégées
-

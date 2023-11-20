@@ -7,7 +7,7 @@
 *************************************************************************/
 
 //---------- Interface de la classe <Trajet> (fichier Trajet.h) ----------------
-#if ! defined ( TRAJET_H )
+#if !defined(TRAJET_H)
 #define TRAJET_H
 
 //--------------------------------------------------- Interfaces utilisées
@@ -22,57 +22,60 @@
 //
 //------------------------------------------------------------------------
 
-class Trajet 
+class Trajet
 {
-//----------------------------------------------------------------- PUBLIC
+    //----------------------------------------------------------------- PUBLIC
 
 public:
-//----------------------------------------------------- Méthodes publiques
-    virtual void Afficher ( ) const;
+    //----------------------------------------------------- Méthodes publiques
+    virtual void Afficher() const;
     // Mode d'emploi :
     //
     // Contrat :
     //
 
-
-//------------------------------------------------- Surcharge d'opérateurs
-    Trajet & operator = ( const Trajet & unTrajet );
+    //------------------------------------------------- Surcharge d'opérateurs
+    Trajet &operator=(const Trajet &unTrajet);
     // Mode d'emploi :
     //
     // Contrat :
     //
 
-
-//-------------------------------------------- Constructeurs - destructeur
-    Trajet ( const Trajet & unTrajet );
+    //-------------------------------------------- Constructeurs - destructeur
+    Trajet();
     // Mode d'emploi (constructeur de copie) :
     //
     // Contrat :
     //
 
-    Trajet ( const char * depart, const char * arrivee, const char * transport );
+    Trajet(const Trajet &unTrajet);
+    // Mode d'emploi (constructeur de copie) :
+    //
+    // Contrat :
+    //
+
+    Trajet(const char *depart, const char *arrivee, const char *transport);
     // Mode d'emploi :
     //
     // Contrat :
     //
 
-    virtual ~Trajet ( );
+    virtual ~Trajet();
     // Mode d'emploi :
     //
     // Contrat :
     //
 
-//------------------------------------------------------------------ PRIVE
+    //------------------------------------------------------------------ PRIVE
 
 protected:
-//----------------------------------------------------- Méthodes protégées
+    //----------------------------------------------------- Méthodes protégées
 
-//----------------------------------------------------- Attributs protégés
-    const char * _depart;
-    const char * _arrivee;
+    //----------------------------------------------------- Attributs protégés
+    const char *_depart;
+    const char *_arrivee;
 };
 
 //-------------------------------- Autres définitions dépendantes de <Trajet>
 
 #endif // Trajet_H
-
