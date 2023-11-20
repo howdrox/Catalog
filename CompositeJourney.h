@@ -1,29 +1,28 @@
 /*************************************************************************
-                           TS  -  description
+                           CompositeJourney  -  description
                              -------------------
     début                : $DATE$
     copyright            : (C) $YEAR$ par $AUTHOR$
     e-mail               : $EMAIL$
 *************************************************************************/
 
-//---------- Interface de la classe <TS> (fichier TS.h) ----------------
-#if !defined(TS_H)
-#define TS_H
+//---------- Interface de la classe <CompositeJourney> (fichier CompositeJourney.h) ----------------
+#if !defined(TC_H)
+#define TC_H
 
 //--------------------------------------------------- Interfaces utilisées
-#include "Trajet.h"
-
+#include "Journey.h"
 //------------------------------------------------------------- Constantes
 
 //------------------------------------------------------------------ Types
 
 //------------------------------------------------------------------------
-// Rôle de la classe <TS>
+// Rôle de la classe <CompositeJourney>
 //
 //
 //------------------------------------------------------------------------
 
-class SimpleJourney : public Journey
+class CompositeJourney : public Journey
 {
     //----------------------------------------------------------------- PUBLIC
 
@@ -36,32 +35,32 @@ public:
     //
 
     //------------------------------------------------- Surcharge d'opérateurs
-    TS &operator=(const TS &unTS);
+    CompositeJourney &operator=(const CompositeJourney &unTC);
     // Mode d'emploi :
     //
     // Contrat :
     //
 
     //-------------------------------------------- Constructeurs - destructeur
-    TS();
+    CompositeJourney();
     // Mode d'emploi (constructeur de copie) :
     //
     // Contrat :
     //
 
-    TS(const TS &unTS);
+    CompositeJourney(const CompositeJourney &unTC);
     // Mode d'emploi (constructeur de copie) :
     //
     // Contrat :
     //
 
-    TS(const char *depart, const char *arrivee, const char *transport);
+    CompositeJourney(const Journey *desTrajets);
     // Mode d'emploi :
     //
     // Contrat :
     //
 
-    virtual ~TS();
+    virtual ~CompositeJourney();
     // Mode d'emploi :
     //
     // Contrat :
@@ -73,10 +72,9 @@ protected:
     //----------------------------------------------------- Méthodes protégées
 
     //----------------------------------------------------- Attributs protégés
-
-    const char *_transportMethod;
+    Journeys _journeys;
 };
 
-//-------------------------------- Autres définitions dépendantes de <TS>
+//-------------------------------- Autres définitions dépendantes de <CompositeJourney>
 
-#endif // TS_H
+#endif // TC_H

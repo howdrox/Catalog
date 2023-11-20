@@ -1,12 +1,12 @@
 /*************************************************************************
-                           TC  -  description
+                           CompositeJourney  -  description
                              -------------------
     début                : $DATE$
     copyright            : (C) $YEAR$ par $AUTHOR$
     e-mail               : $EMAIL$
 *************************************************************************/
 
-//---------- Réalisation de la classe <TC> (fichier TC.cpp) ------------
+//---------- Réalisation de la classe <CompositeJourney> (fichier CompositeJourney.cpp) ------------
 
 //---------------------------------------------------------------- INCLUDE
 
@@ -15,62 +15,62 @@
 using namespace std;
 
 //------------------------------------------------------ Include personnel
-#include "TC.h"
+#include "CompositeJourney.h"
 
 //------------------------------------------------------------- Constantes
 
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-void TC::Afficher() const
+void CompositeJourney::Afficher() const
 // Algorithme :
 //
 {
 } //----- Fin de Afficher
 
 //------------------------------------------------- Surcharge d'opérateurs
-TC &TC::operator=(const TC &unTC)
+CompositeJourney &CompositeJourney::operator=(const CompositeJourney &unTC)
 // Algorithme :
 //
 {
 } //----- Fin de operator =
 
 //-------------------------------------------- Constructeurs - destructeur
-TC::TC(const TC &unTC)
+CompositeJourney::CompositeJourney(const CompositeJourney &unTC)
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au constructeur de copie de <TC>" << endl;
+    cout << "Appel au constructeur de copie de <CompositeJourney>" << endl;
 #endif
-} //----- Fin de TC (constructeur de copie)
+} //----- Fin de CompositeJourney (constructeur de copie)
 
-TC::TC()
+CompositeJourney::CompositeJourney()
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au constructeur de <TC>" << endl;
+    cout << "Appel au constructeur de <CompositeJourney>" << endl;
 #endif
-} //----- Fin de TC
+} //----- Fin de CompositeJourney
 
-TC::TC(const Trajet *desTrajets)
+CompositeJourney::CompositeJourney(const Trajet *desTrajets)
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au constructeur de <TC>" << endl;
+    cout << "Appel au constructeur de <CompositeJourney>" << endl;
 #endif
-} //----- Fin de TC
+} //----- Fin de CompositeJourney
 
-TC::~TC()
+CompositeJourney::~CompositeJourney()
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au destructeur de <TC>" << endl;
+    cout << "Appel au destructeur de <CompositeJourney>" << endl;
 #endif
-} //----- Fin de ~TC
+} //----- Fin de ~CompositeJourney
 
 //------------------------------------------------------------------ PRIVE
 

@@ -1,67 +1,67 @@
 /*************************************************************************
-                           Trajet  -  description
+                           SimpleJourney  -  description
                              -------------------
     début                : $DATE$
     copyright            : (C) $YEAR$ par $AUTHOR$
     e-mail               : $EMAIL$
 *************************************************************************/
 
-//---------- Interface de la classe <Trajet> (fichier Trajet.h) ----------------
-#if !defined(TRAJET_H)
-#define TRAJET_H
+//---------- Interface de la classe <SimpleJourney> (fichier SimpleJourney.h) ----------------
+#if !defined(TS_H)
+#define TS_H
 
 //--------------------------------------------------- Interfaces utilisées
+#include "Journey.h"
 
 //------------------------------------------------------------- Constantes
 
 //------------------------------------------------------------------ Types
 
 //------------------------------------------------------------------------
-// Rôle de la classe <Trajet>
+// Rôle de la classe <SimpleJourney>
 //
 //
 //------------------------------------------------------------------------
-Journey::Show;
 
-class Trajet
+class SimpleJourney : public Journey
 {
     //----------------------------------------------------------------- PUBLIC
 
 public:
     //----------------------------------------------------- Méthodes publiques
-    virtual void Afficher() const;
+    void Show() const;
     // Mode d'emploi :
     //
     // Contrat :
     //
 
     //------------------------------------------------- Surcharge d'opérateurs
-    Trajet &operator=(const Trajet &unTrajet);
+    SimpleJourney &operator=(const SimpleJourney &unTS);
     // Mode d'emploi :
     //
     // Contrat :
     //
 
     //-------------------------------------------- Constructeurs - destructeur
-    Trajet();
+    SimpleJourney();
     // Mode d'emploi (constructeur de copie) :
     //
     // Contrat :
     //
 
-    Trajet(const Trajet &unTrajet);
+    SimpleJourney(const SimpleJourney &unTS);
     // Mode d'emploi (constructeur de copie) :
     //
     // Contrat :
     //
 
-    Trajet(const char *depart, const char *arrivee, const char *transport);
+    SimpleJourney(const char *depart, const char *arrivee, const char *transport);
     // Mode d'emploi :
     //
     // Contrat :
     //
 
-    virtual ~Trajet();
+    virtual ~SimpleJourney();
     // Mode d'emploi :
     //
     // Contrat :
@@ -73,10 +73,10 @@ protected:
     //----------------------------------------------------- Méthodes protégées
 
     //----------------------------------------------------- Attributs protégés
-    const char *_begin;
-    const char *_end;
+
+    const char *_transportMethod;
 };
 
-//-------------------------------- Autres définitions dépendantes de <Trajet>
+//-------------------------------- Autres définitions dépendantes de <SimpleJourney>
 
-#endif // Trajet_H
+#endif // TS_H

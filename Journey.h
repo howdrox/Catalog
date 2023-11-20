@@ -1,66 +1,66 @@
 /*************************************************************************
-                           TC  -  description
+                           Journey  -  description
                              -------------------
     début                : $DATE$
     copyright            : (C) $YEAR$ par $AUTHOR$
     e-mail               : $EMAIL$
 *************************************************************************/
 
-//---------- Interface de la classe <TC> (fichier TC.h) ----------------
-#if !defined(TC_H)
-#define TC_H
+//---------- Interface de la classe <Journey> (fichier Journey.h) ----------------
+#if !defined(TRAJET_H)
+#define TRAJET_H
 
 //--------------------------------------------------- Interfaces utilisées
-#include "Trajet.h"
+
 //------------------------------------------------------------- Constantes
 
 //------------------------------------------------------------------ Types
 
 //------------------------------------------------------------------------
-// Rôle de la classe <TC>
+// Rôle de la classe <Journey>
 //
 //
 //------------------------------------------------------------------------
 
-class CompositeJourney : public Journey
+class Journey
 {
     //----------------------------------------------------------------- PUBLIC
 
 public:
     //----------------------------------------------------- Méthodes publiques
-    void Show() const;
+    virtual void Show() const;
     // Mode d'emploi :
     //
     // Contrat :
     //
 
     //------------------------------------------------- Surcharge d'opérateurs
-    TC &operator=(const TC &unTC);
+    Journey &operator=(const Journey &unTrajet);
     // Mode d'emploi :
     //
     // Contrat :
     //
 
     //-------------------------------------------- Constructeurs - destructeur
-    TC();
+    Journey();
     // Mode d'emploi (constructeur de copie) :
     //
     // Contrat :
     //
 
-    TC(const TC &unTC);
+    Journey(const Journey &unTrajet);
     // Mode d'emploi (constructeur de copie) :
     //
     // Contrat :
     //
 
-    TC(const Trajet *desTrajets);
+    Journey(const char *depart, const char *arrivee, const char *transport);
     // Mode d'emploi :
     //
     // Contrat :
     //
 
-    virtual ~TC();
+    virtual ~Journey();
     // Mode d'emploi :
     //
     // Contrat :
@@ -72,9 +72,10 @@ protected:
     //----------------------------------------------------- Méthodes protégées
 
     //----------------------------------------------------- Attributs protégés
-    Journeys _journeys;
+    const char *_begin;
+    const char *_end;
 };
 
-//-------------------------------- Autres définitions dépendantes de <TC>
+//-------------------------------- Autres définitions dépendantes de <Journey>
 
-#endif // TC_H
+#endif // Trajet_H

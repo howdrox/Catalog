@@ -1,12 +1,12 @@
 /*************************************************************************
-                           Trajet  -  description
+                           Journey  -  description
                              -------------------
     début                : $DATE$
     copyright            : (C) $YEAR$ par $AUTHOR$
     e-mail               : $EMAIL$
 *************************************************************************/
 
-//---------- Réalisation de la classe <Trajet> (fichier Trajet.cpp) ------------
+//---------- Réalisation de la classe <Journey> (fichier Journey.cpp) ------------
 
 //---------------------------------------------------------------- INCLUDE
 
@@ -15,53 +15,48 @@
 using namespace std;
 
 //------------------------------------------------------ Include personnel
-#include "Trajet.h"
+#include "Journey.h"
 
 //------------------------------------------------------------- Constantes
 
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-void Trajet::Afficher() const
-// Algorithme :
-//
-{
-} //----- Fin de Afficher
 
 //------------------------------------------------- Surcharge d'opérateurs
-Trajet &Trajet::operator=(const Trajet &unTrajet)
+Journey &Journey::operator=(const Journey &unTrajet)
 // Algorithme :
 //
 {
 } //----- Fin de operator =
 
 //-------------------------------------------- Constructeurs - destructeur
-Trajet::Trajet(const Trajet &unTrajet)
+Journey::Journey(const Journey &unTrajet)
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au constructeur de copie de <Trajet>" << endl;
+    cout << "Appel au constructeur de copie de <Journey>" << endl;
 #endif
-} //----- Fin de Trajet (constructeur de copie)
+} //----- Fin de Journey (constructeur de copie)
 
-Trajet::Trajet()
+Journey::Journey()
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au constructeur de <Trajet>" << endl;
+    cout << "Appel au constructeur de <Journey>" << endl;
 #endif
-} //----- Fin de Trajet
+} //----- Fin de Journey
 
-Trajet::~Trajet()
+Journey::~Journey()
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au destructeur de <Trajet>" << endl;
+    cout << "Appel au destructeur de <Journey>" << endl;
 #endif
-} //----- Fin de ~Trajet
+} //----- Fin de ~Journey
 
 //------------------------------------------------------------------ PRIVE
 
