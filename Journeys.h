@@ -12,16 +12,22 @@
 
 //------------------------------------------------------------------------
 // A linked list of `Journey`
-//
 //------------------------------------------------------------------------
 
 #include "Journey.h"
 
+struct Node
+{
+    Journey data;
+    Node *next;
+
+    // Constructor to initialize the node with data and next pointer
+    Node(Journey j) : data(j), next(nullptr) {}
+};
+
 class Journeys
 {
 public:
-    Journeys &operator=(const Journeys &aJourney);
-
     // -------------------------------------------- Constructors & Destructor
     Journeys();
 
@@ -30,12 +36,10 @@ public:
     virtual ~Journeys();
 
     // -------------------------------------------- Other Methods
-    int Add(const char *depart, const char *arrivee, const char *transport);
-
-    virtual void Show() const;
+    int Add(Journey journey);
 
 protected:
-    Journey *_head;
+    Node *_head;
 };
 
 #endif // JOURNEY_H

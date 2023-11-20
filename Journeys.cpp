@@ -11,12 +11,8 @@ using namespace std;
 
 #include "Journeys.h"
 
-Journeys &Journeys::operator=(const Journeys &unTrajet)
-{
-}
-
 //-------------------------------------------- Constructors & Destructor
-Journeys::Journeys()
+Journeys::Journeys() : _head(nullptr)
 {
 #ifdef MAP
     cout << "Appel au constructeur de <Journeys>" << endl;
@@ -35,4 +31,10 @@ Journeys::~Journeys()
 #ifdef MAP
     cout << "Appel au destructeur de <Journeys>" << endl;
 #endif
+}
+
+// -------------------------------------------- Other Methods
+
+int Journeys::Add(Journey journey)
+{
 }
