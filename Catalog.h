@@ -7,7 +7,7 @@
 *************************************************************************/
 
 //---------- Interface de la classe <Catalogue> (fichier Catalogue.h) ----------------
-#if !defined(CATALOGUE_H)
+#ifndef CATALOGUE_H
 #define CATALOGUE_H
 
 //--------------------------------------------------- Interfaces utilisées
