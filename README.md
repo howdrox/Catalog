@@ -1,24 +1,17 @@
-This is a clone of the repository [at](https://github.com/Snownamida/Cpp-TP2)
+# CATALOG
 
+## This is a clone of [this repo](https://github.com/Snownamida/Cpp-TP2)
 
-> # CATALOG
-> ### SUN Jixiang - SCHLEE Adam - KUSNO Louis - CHAPARD Clément
-> ### B3309 - B3311
+## Authors:  SUN Jixiang - SCHLEE Adam - KUSNO Louis - CHAPARD Clément
 
-### Pour lancer le programme :
+## To launch the app
 
 ```console
 make
 ./trajets
 ```
-*L'éxécutable s'appelle trajets*
+*The executable is called `trajets`*
 
-#### On peut également lancer le programme avec un jeu de test prédéfini :
+## Heritage graph
 
-```console
-./trajets < test.in
-```
-
-### Graphe d'héritage
-
-![''](架构图/héritage.svg "Graphe d'héritage")
+![Heritage Graph](GrapheHeritage.jpg)
