@@ -1,35 +1,15 @@
-/*************************************************************************
-                           journeys
-                             -------------------
-    début                : 27/11/2023
-    copyright            : (C) 2023 par Jixiang, Adam, Clément, Louis
-    binome               : B3311 et B3309
-*************************************************************************/
-
-//---------- Réalisation de la classe <journeys> (fichier journeys.cpp) ----------
-
-//---------------------------------------------------------------- INCLUDE
-
-//-------------------------------------------------------- Include système
 #include <iostream>
 using std::cout;
 using std::ostream;
 
-//------------------------------------------------------ Include personnel
 #include "journeys.h"
 
-//----------------------------------------------------------------- PUBLIC
-
-//------------------------------------------------- Surcharge d'opérateurs
 ostream &operator<<(ostream &os, const Journeys &journeys) {
   journeys.show();
   return os;
-} //----- Fin de operator <<
+}
 
-//------------------------------------------------------------------ PRIVE
-
-//----------------------------------------------------- Méthodes privées
-void Journeys::show(const char sep) const 
+void Journeys::show(const char sep) const
 // Algorithme :
 // Show all the journeys in the journeys
 // sep : the separator between each journey
@@ -50,4 +30,4 @@ void Journeys::show(const char sep) const
     if (nodeJourney)
       cout << sep;
   }
-} //----- Fin de show
+}

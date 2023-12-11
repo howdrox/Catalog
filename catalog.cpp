@@ -1,29 +1,13 @@
-/*************************************************************************
-                           catalog
-                             -------------------
-    début                : 27/11/2023
-    copyright            : (C) 2023 par Jixiang, Adam, Clément, Louis
-    binome               : B3311 et B3309
-*************************************************************************/
-
-//---------- Réalisation de la classe <Catalog> (fichier Catalog.cpp) ------------
-
-//---------------------------------------------------------------- INCLUDE
-
-//-------------------------------------------------------- Include système
 #include <cstring>
 #include <iostream>
 using std::cout;
 using std::endl;
 using std::ostream;
 
-//------------------------------------------------------ Include personnel
 #include "catalog.h"
 
-//----------------------------------------------------- Méthodes publiques
 void Catalog::Search(const char *const from, const char *const to,
                      PathNode *pathNode)
-
 // Algorithme :
 // A DFS Search is used to find all the possible journeys.
 {
@@ -75,10 +59,9 @@ void Catalog::Search(const char *const from, const char *const to,
       Search(nodeJourney->pdata->GetTo(), to, nextPathNode);
     }
   }
-} //----- Fin de Search
+}
 
-//------------------------------------------------- Surcharge d'opérateurs
 ostream &operator<<(ostream &os, const Catalog &catalog) {
   catalog.show('\n');
   return os;
-} //----- Fin de operator <<
+}
