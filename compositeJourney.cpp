@@ -1,29 +1,12 @@
-/*************************************************************************
-                           compositeJourney
-                             -------------------
-    début                : 27/11/2023
-    copyright            : (C) 2023 par Jixiang, Adam, Clément, Louis
-    binome               : B3311 et B3309
-*************************************************************************/
-
-//---------- Réalisation de la classe <compositeJourney> (fichier compositeJourney.cpp) ----------------
-
-//---------------------------------------------------------------- INCLUDE
-
-//-------------------------------------------------------- Include système
 #include <cstdlib>
 #include <cstring>
 #include <ostream>
 using std::ostream;
 using std::strcmp;
 
-//------------------------------------------------------ Include personnel
 #include "compositeJourney.h"
 
-//----------------------------------------------------------------- PUBLIC
-
-//----------------------------------------------------- Méthodes publiques
-int CompositeJourney::Add(Journey *pjourney, bool check) 
+int CompositeJourney::Add(Journey *pjourney, bool check)
 // Algorithme :
 // If the list is empty, add the journey to the list and update _from and _to
 // If the list is not empty, check if the journey can be added to the list
@@ -61,17 +44,12 @@ int CompositeJourney::Add(Journey *pjourney, bool check)
   free((char *)_to);
   _to = strdup(pjourney->GetTo());
   return 0;
-} //----- Fin de Add
+}
 
-//------------------------------------------------- Surcharge d'opérateurs
-std::ostream &operator<<(std::ostream &os, const CompositeJourney &compositeJourney) {
+std::ostream &operator<<(std::ostream &os,
+                         const CompositeJourney &compositeJourney) {
   compositeJourney.show();
   return os;
-} //----- Fin de operator <<
+}
 
-//------------------------------------------------------------------ PRIVE
-
-//----------------------------------------------------- Méthodes protégées
-void CompositeJourney::show(void) const {
-  Journeys::show();
-} //----- Fin de show
+void CompositeJourney::show(void) const { Journeys::show(); }

@@ -1,18 +1,6 @@
-/*************************************************************************
-                           linkedList
-                             -------------------
-    début                : 27/11/2023
-    copyright            : (C) 2023 par Jixiang, Adam, Clément, Louis
-    binome               : B3311 et B3309
-*************************************************************************/
-
-//---------- Interface de la classe <linkedList> (fichier linkedList.h)
-//----------------
-
 #ifndef LINKEDLIST_H_
 #define LINKEDLIST_H_
 
-//------------------------------------------------------------------ Types
 template <typename T>
 struct Node
 // Node of the linkedList
@@ -33,28 +21,20 @@ struct Node
 //------------------------------------------------------------------------
 
 template <typename T> class LinkedList {
-  //----------------------------------------------------------------- PUBLIC
-
 public:
-  //----------------------------------------------------- Méthodes publiques
-
   void Add(T *pdata, bool AddToEnd = true)
-
   // Mode d'emploi :
-
   // This function will add a data to the linkedList.
   // pdata : the data to add
   // AddToEnd : if AddToEnd is true, the data will be added to the end of the
   // linkedList.
 
   // Contrat :
-
   // important:should pass a new Journey* object,
   // LinkedList will make the GC for it
   // data should have a refCount
 
   // Algorithme :
-
   // If the linkedList is empty, add the data to the linkedList and update
   // _first and _last. If the linkedList is not empty, add the data to the
   // linkedList and update _first or _last depending on the value of AddToEnd
@@ -76,7 +56,6 @@ public:
 
   Node<T> *GetLast(void) const { return _last; }
 
-  //-------------------------------------------- Constructeurs - destructeur
   virtual ~LinkedList()
   // Algorithme :
   // Delete all the nodes of the linkedList
@@ -97,15 +76,11 @@ public:
     }
   }
 
-  //----------------------------------------------------- Attributs publics
   unsigned int refCount = 0;
   // Attribute that is public because it is used by the catalog to know if a
   // journey is still used or not
 
 protected:
-  //------------------------------------------------------------------ PRIVE
-
-  //----------------------------------------------------- Attributs protégés
   Node<T> *_first = nullptr;
   Node<T> *_last = nullptr;
 };
