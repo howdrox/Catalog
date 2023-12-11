@@ -2,7 +2,7 @@
 using std::ostream;
 
 Journey::~Journey()
-// Algorithme :
+// Algorithm :
 // Free the memory allocated by strdup()
 // Using free instead of delete because the string was created with strdup(),
 // which require a free
