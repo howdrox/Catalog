@@ -1,0 +1,42 @@
+digraph graphname {
+    node [fontname = "Helvetica,Arial,sans-serif"; shape = record; style = filled; fillcolor = gray95;];
+    
+    
+    
+    
+    "Journey" [label = <{<b>Journey</b>  |<b>Attributs</b><br/>const char *_from<br/>const char *_to<br/>unsigned int refCount = 0|<b>Méthodes</b><br/>virtual void show(void) const<br/>Journey(const char *start = &quot;&quot;, const char *end = &quot;&quot;)<br/>friend std::ostream &amp;operator&lt;&lt;(std::ostream &amp;os, const Journey &amp;journey)<br/>virtual ~Journey()}>;];
+    
+    
+    "SimpleJourney" [label = <{<b>SimpleJourney</b>  |<b>Attributs</b><br/>const char *_transportMethod|<b>Méthodes</b><br/>SimpleJourney(const char *start = &quot;&quot;, const char *end = &quot;&quot;,const char *transportMethod = &quot;&quot;)<br/>virtual ~SimpleJourney()<br/>void show(void) const}>;];
+    
+    
+    "Journeys" [label = <{<b>Journeys</b>  |<b>Attributs</b><br/>LinkedList&lt;Journey&gt; journeyLinkedList|<b>Méthodes</b><br/>friend std::ostream &amp;operator&lt;&lt;(std::ostream &amp;os, const Journeys &amp;journeys)<br/>void add(Journey *pjourney)<br/>void show(const char sep = &#x27;\|&#x27;) const}>;];
+    
+    
+    "Catalog" [label = <{<b>Catalog</b>  |<b>Attributs</b><br/>PathNode pathRoot<br/>|<b>Méthodes</b><br/>friend std::ostream &amp;operator&lt;&lt;(std::ostream &amp;os, const Catalog &amp;Catalog)<br/>void search(const char *const from, const char *const to, PathNode *pathHead = nullptr)}>;];
+    
+    
+    "Struct PathNode" [label = <{<b>Struct PathNode</b>  |<b>Attributs</b><br/>Journey *pjourney<br/>PathNode *lastPathNode<br/>LinkedList&lt;PathNode&gt; nextPathNodes<br/>unsigned int refCount = 0|<b>Méthodes</b>}>;];
+    
+    
+    "CompositeJourney" [label = <{<b>CompositeJourney</b>  |<b>Attributs</b>|<b>Méthodes</b><br/>int add(Journey *journey, bool check = true)<br/>friend std::ostream &amp;operator&lt;&lt;(std::ostream &amp;os, const CompositeJourney &amp;compositeJourney)<br/>void show(void) const}>;];
+    
+    
+    "<typename T> struct Node" [label = <{<b>&lt;typename T&gt; struct Node</b>  |<b>Attributs</b><br/>T *pdata<br/>Node&lt;T&gt; *next|<b>Méthodes</b>}>;];
+    
+    
+    "<typename T> LinkedList" [label = <{<b>&lt;typename T&gt; LinkedList</b>  |<b>Attributs</b><br/>Node&lt;T&gt; *_first<br/>Node&lt;T&gt; *_last<br/>unsigned int refCount|<b>Méthodes</b><br/>virtual ~LinkedList()<br/>void Add(T *pdata, bool AddToEnd = true)<br/>Node&lt;T&gt; *getFirst(void) const<br/>Node&lt;T&gt; *getLast(void) const}>;];
+    
+    "Authors" [label = <{<b>Authors</b>  |<b>Jixiang SUN<br/>Adam SCHLEE<br/>Louis KUSNO<br/>Clément Chapard </b>}>;];
+    
+    Catalog -> Journeys;
+    CompositeJourney -> Journeys;
+    CompositeJourney -> Journey;
+    SimpleJourney -> Journey;
+    
+    edge [arrowhead = vee; style = dashed;];
+    "<typename T> LinkedList" -> "<typename T> struct Node" [label = use;];
+    Catalog -> "Struct PathNode" [label = use;];
+    "Struct PathNode" -> "<typename T> LinkedList" [label = use;];
+    Journeys -> "<typename T> LinkedList" [label = use;];
+}
